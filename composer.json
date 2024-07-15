@@ -1,6 +1,6 @@
 {
     "name": "punktde/search-alternativesearchwords",
-    "description": "Show alternative search words",
+    "description": "Helpers to suggest alternative search words",
     "type": "neos-package",
     "require": {
         "neos/flow:": "*"
