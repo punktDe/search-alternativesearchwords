@@ -1,0 +1,5 @@
+Neos:
+  ContentRepository:
+    Search:
+      defaultContext:
+        PunktDe.Search.AlternativeSearchWords: PunktDe\Search\AlternativeSearchWords\Eel\IndexingHelper
