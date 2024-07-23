@@ -3,7 +3,7 @@
     "description": "Helpers to suggest alternative search words",
     "type": "neos-package",
     "require": {
-        "neos/flow:": "*"
+        "neos/flow": "*"
     },
     "autoload": {
         "psr-4": {
