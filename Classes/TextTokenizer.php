@@ -15,7 +15,7 @@ class TextTokenizer
      * @var string[]
      */
     #[Flow\InjectConfiguration(path: "stopWordFolders", package: "PunktDe.Search.AlternativeSearchWords")]
-    private array $stopWordFolders = [];
+    protected array $stopWordFolders = [];
 
     private const REMOVE_CHARACTERS = ['„', '“', '«', '»', ')', '(', '!', '?', '&'];
     private const WORD_RIGHT_TRIM_CHARACTERS = "\n\t.:,";
