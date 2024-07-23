@@ -5,6 +5,7 @@ namespace PunktDe\Search\AlternativeSearchWords;
 
 use Neos\Utility\Files;
 use Neos\Flow\Annotations as Flow;
+use Psr\Log\LoggerInterface;
 
 /**
  * @Flow\Scope("singleton")
@@ -30,6 +31,11 @@ class TextTokenizer
      */
     private array $loadedStopWordFiles = [];
 
+    public function __construct(
+        private readonly LoggerInterface $logger,
+    ) {
+    }
+
     public function initializeObject(): void
     {
         if (is_dir($this->stopWordFolders['customerSpecificFolder'] ?? '')) {
@@ -50,6 +56,7 @@ class TextTokenizer
         $languageCodeFilePath = Files::concatenatePaths([$this->stopWordFolders['languageFolder'], $languageCode . '.txt']);
 
         if (!$this->loadStopWordsFromFile($languageCodeFilePath)) {
+            $this->logger->warning(sprintf('Could not load stopWords for language %s from file: %s', $languageCode, $languageCodeFilePath));
             return [];
         }
 

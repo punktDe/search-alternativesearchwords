@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace PunktDe\Search\AlternativeSearchWords\Eel;
 
-use Neos\Flow\Annotations as Flow;
 use Neos\ContentRepository\Domain\Model\NodeInterface;
 use Neos\Eel\ProtectedContextAwareInterface;
 use PunktDe\Search\AlternativeSearchWords\TextTokenizer;

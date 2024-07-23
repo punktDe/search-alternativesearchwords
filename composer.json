@@ -1,18 +1,18 @@
 {
-    "name": "punktde/search-alternativesearchwords",
-    "description": "Helpers to suggest alternative search words",
+    "name": "punktde/neos-advancedsearch",
+    "description": "Advanced Search with suggestions, completions and alternative searchwords",
     "type": "neos-package",
     "require": {
         "neos/flow": "*"
     },
     "autoload": {
         "psr-4": {
-            "PunktDe\\Search\\AlternativeSearchWords\\": "Classes/"
+            "PunktDe\\Neos\\AdvancedSearch\\": "Classes/"
         }
     },
     "extra": {
         "neos": {
-            "package-key": "PunktDe.Search.AlternativeSearchWords"
+            "package-key": "PunktDe.Neos.AdvancedSearch"
         }
     }
 }
