@@ -11,5 +11,5 @@ Tokenize and ingest the alternatives within your document
         search:
             elasticSearchMapping:
                 type: keyword
-            indexing: "${PunktDe.Search.AlternativeSearchWords.stopWordFilteredTokenize(q(node).property('title') + ' ' + q(node).property('metaKeywords') + ' ' + q(node).property('metaDescription'), node)}"
+            indexing: "${PunktDe.Neos.AdvancedSearch.stopWordFilteredTokenize(q(node).property('title') + ' ' + q(node).property('metaKeywords') + ' ' + q(node).property('metaDescription'), node)}"
 ```

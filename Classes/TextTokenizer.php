@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace PunktDe\Search\AlternativeSearchWords;
+namespace PunktDe\Neos\AdvancedSearch;
 
 use Neos\Utility\Files;
 use Neos\Flow\Annotations as Flow;
@@ -15,7 +15,7 @@ class TextTokenizer
     /**
      * @var string[]
      */
-    #[Flow\InjectConfiguration(path: "stopWordFolders", package: "PunktDe.Search.AlternativeSearchWords")]
+    #[Flow\InjectConfiguration(path: "stopWordFolders", package: "PunktDe.Neos.AdvancedSearch")]
     protected array $stopWordFolders = [];
 
     private const REMOVE_CHARACTERS = ['„', '“', '«', '»', ')', '(', '!', '?', '&'];

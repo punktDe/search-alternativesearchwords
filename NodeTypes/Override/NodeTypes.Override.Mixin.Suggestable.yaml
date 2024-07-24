@@ -1,0 +1,11 @@
+'Flowpack.SearchPlugin:SuggestableMixin':
+  abstract: true
+  properties:
+    'neos_suggestion':
+      search:
+        indexing: "${PunktDe.Neos.AdvancedSearch.Indexing.indexSuggestionIfSearchable(node, ['title','metaKeywords','metaDescription'], 20)}"
+
+    esSuggestionSnippet:
+      search:
+        type: text
+        indexing: "${Neos.Node.isOfType(node, 'PunktDe.Neos.AdvancedSearch:Mixin.HiddenFromInternalSearch') || node.hidden == true ? '' : FusionRendering.render(node, 'suggestion')}"

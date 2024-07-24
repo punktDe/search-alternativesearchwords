@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace PunktDe\Search\AlternativeSearchWords\Tests\Functional;
+namespace PunktDe\Neos\AdvancedSearch\Tests\Functional;
 
 use Neos\Flow\Tests\FunctionalTestCase;
-use PunktDe\Search\AlternativeSearchWords\TextTokenizer;
+use PunktDe\Neos\AdvancedSearch\TextTokenizer;
 
 class TextTokenizerTestCase extends FunctionalTestCase
 {

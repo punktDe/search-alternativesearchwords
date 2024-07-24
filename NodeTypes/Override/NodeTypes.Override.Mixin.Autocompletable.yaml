@@ -1,0 +1,10 @@
+'Flowpack.SearchPlugin:AutocompletableMixin':
+  abstract: true
+  properties:
+    'neos_completion':
+      search:
+        elasticSearchMapping:
+          type: text
+          analyzer: autocomplete
+          fielddata: true
+        indexing: "${PunktDe.Neos.AdvancedSearch.Indexing.indexCompletionIfSearchable(node, ['title', 'metaDescription'])}"

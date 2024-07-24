@@ -1,8 +1,8 @@
 PunktDe:
-  Search:
-    AlternativeSearchWords:
+  Neos:
+    AdvancedSearch:
       stopWordFolders:
-        languageFolder: '%FLOW_PATH_PACKAGES%/Application/PunktDe.Search.AlternativeSearchWords/Resources/Private/StopWords'
+        languageFolder: '%FLOW_PATH_PACKAGES%/Application/PunktDe.Neos.AdvancedSearch/Resources/Private/StopWords'
         # All files within this folder are loaded
         customerSpecificFolder: ''
 

@@ -1,0 +1,24 @@
+'Neos.Neos:Document':
+  superTypes:
+    'Flowpack.SearchPlugin:AutocompletableMixin': true
+    'Flowpack.SearchPlugin:SuggestableMixin': true
+
+  properties:
+    neos_fulltext_parts:
+      search:
+        elasticSearchMapping:
+          type: flattened
+          ignore_above: 1000
+          enabled: ~
+
+    esDocumentFacet:
+      search:
+        elasticSearchMapping:
+          type: keyword
+        indexing: "${'page'}"
+
+    esAlternativeSearchword:
+      search:
+        elasticSearchMapping:
+          type: keyword
+        indexing: "${PunktDe.Neos.AdvancedSearch.stopWordFilteredTokenize(q(node).property('title') + ' ' + q(node).property('metaKeywords') + ' ' + q(node).property('metaDescription'), node)}"

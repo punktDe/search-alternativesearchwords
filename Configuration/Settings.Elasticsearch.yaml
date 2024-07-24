@@ -2,4 +2,4 @@ Neos:
   ContentRepository:
     Search:
       defaultContext:
-        PunktDe.Search.AlternativeSearchWords: PunktDe\Search\AlternativeSearchWords\Eel\IndexingHelper
+        PunktDe.Neos.AdvancedSearch.Indexing: PunktDe\Neos\AdvancedSearch\Eel\IndexingHelper
