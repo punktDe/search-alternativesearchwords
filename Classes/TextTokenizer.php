@@ -57,7 +57,6 @@ class TextTokenizer
 
         if (!$this->loadStopWordsFromFile($languageCodeFilePath)) {
             $this->logger->warning(sprintf('Could not load stopWords for language %s from file: %s', $languageCode, $languageCodeFilePath));
-            return [];
         }
 
         $tokens = explode(' ', $input);
