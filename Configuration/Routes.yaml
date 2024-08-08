@@ -1,0 +1,10 @@
+-
+  name: 'Search as you type'
+  uriPattern: 'neos-advanced-search/search-as-you-type'
+  defaults:
+    '@package':    'PunktDe.Neos.AdvancedSearch'
+    '@controller': 'Suggest'
+    '@action':     'index'
+    '@format':     'json'
+  appendExceedingArguments: true
+  httpMethods: ['GET']

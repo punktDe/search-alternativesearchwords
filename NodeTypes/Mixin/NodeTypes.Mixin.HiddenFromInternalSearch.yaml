@@ -1,0 +1,10 @@
+'PunktDe.Neos.AdvancedSearch:Mixin.HiddenFromInternalSearch':
+  abstract: true
+
+  properties:
+    internalSearchNoIndex:
+      defaultValue: true
+      ui:
+        inspector:
+          editorOptions:
+            disabled: true

@@ -33,7 +33,7 @@ class IndexingHelper implements ProtectedContextAwareInterface
             return '';
         }
 
-        return implode(' ', $this->extractNodeProperties($properties, $node));
+        return implode(' ', $this->stopWordFilteredTokenize(implode(' ',$this->extractNodeProperties($properties, $node)), $node));
     }
 
     /**
@@ -49,7 +49,7 @@ class IndexingHelper implements ProtectedContextAwareInterface
         if ($node->isHidden() || $node->getNodeType()->isOfType(NodeTypeDefinitionInterface::MIXIN_HIDDEN_FROM_INTERNAL_SEARCH)) {
             return [];
         }
-        return $this->suggestionIndexHelper->build($this->extractNodeProperties($properties, $node), $weight);
+        return $this->suggestionIndexHelper->build($this->stopWordFilteredTokenize(implode(' ',$this->extractNodeProperties($properties, $node)), $node), $weight);
     }
 
     /**

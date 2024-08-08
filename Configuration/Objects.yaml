@@ -1,0 +1,12 @@
+PunktDe\Neos\AdvancedSearch\Controller\SuggestController:
+  properties:
+    elasticSearchQueryTemplateCache:
+      object:
+        factoryObjectName: Neos\Flow\Cache\CacheManager
+        factoryMethodName: getCache
+        arguments:
+          1:
+            value: FlowPackSearchPlugin_ElasticSearchQueryTemplateCache
+
+Flowpack\SearchPlugin\Suggestion\SuggestionContextInterface:
+  className: 'PunktDe\Neos\AdvancedSearch\Suggestion\SuggestionContext'
