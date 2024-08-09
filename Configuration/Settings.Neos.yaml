@@ -1,0 +1,6 @@
+Neos:
+  Flow:
+    mvc:
+      routes:
+        'PunktDe.Neos.AdvancedSearch':
+          position: 'before Neos.Neos'

@@ -1,0 +1,11 @@
+privilegeTargets:
+  Neos\Flow\Security\Authorization\Privilege\Method\MethodPrivilege:
+    Punktde_Neos_AdvancedSearch_Controller_SuggestController:
+      matcher: method(PunktDe\Neos\AdvancedSearch\Controller\SuggestController->indexAction())
+
+roles:
+  'Neos.Flow:Everybody':
+    privileges:
+      -
+        privilegeTarget: Punktde_Neos_AdvancedSearch_Controller_SuggestController
+        permission: GRANT
